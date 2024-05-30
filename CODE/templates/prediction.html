@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="#">
+<title>Beauttio - HTML Template by WowThemes.net</title>
+<!-- CSS -->
+<link href="static/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body class="frontpage">
+
+<div id="loader-wrapper">
+<div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div>
+
+
+<div class="menu-outer">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+           <li><a href="/">Home</a></li>
+<!--           <li><a href="{{url_for('upload')}}">Upload</a></li>-->
+<!--			<li><a href="{{url_for('upload')}}">Prediction</a></li>-->
+<!--           <li><a target="_blank" href="https://www.wowthemes.net/themes/beauttio/">WP Version</a></li>-->
+       </ul>
+   </nav>
+</div>
+
+<a class="menu-close" onClick="return true">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</a>
+
+
+
+
+<!--<div class="fixedcallicon">-->
+<!--	<i class="fa fa-phone"></i><span class="hide"></span>-->
+</div>
+<div class="container">
+
+	<section class="background">
+	<div class="content-wrapper">
+		<div class="intro">
+			<form action="{{url_for('predicback')}}" method="POST">
+			<input type="text" name="f1" placeholder="pkSeqID">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f2" placeholder="stime">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f3" placeholder="flgs">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f4" placeholder="flgs_number">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f5" placeholder="proto">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f6" placeholder="proto_number"><br><br>
+			<input type="text" name="f7" placeholder="saddr">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f8" placeholder="daddr">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f9" placeholder="pkts">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f10" placeholder="bytes">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f11" placeholder="state">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f12" placeholder="state_number"><br><br>
+
+			<input type="text" name="f13" placeholder="ltime">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f14" placeholder="seq">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f15" placeholder="dur">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f16" placeholder="mean">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f17" placeholder="stddev">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f18" placeholder="sum"><br><br>
+			<input type="text" name="f19" placeholder="min">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f20" placeholder="max">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f21" placeholder="spkts">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f22" placeholder="dpkts">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f23" placeholder="sbytes">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f24" placeholder="dbytes"><br><br>
+			<input type="text" name="f25" placeholder="rate">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f26" placeholder="srate">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f27" placeholder="drate">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f28" placeholder="TnBPSrcIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f29" placeholder="TnBPDstIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f30" placeholder="TnP_PSrcIP"><br><br>
+			<input type="text" name="f31" placeholder="TnP_PDstIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f32" placeholder="TnP_PerProto">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f33" placeholder="TnP_Per_Dport">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f34" placeholder="AR_P_Proto_P_SrcIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f35" placeholder="AR_P_Proto_P_DstIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f36" placeholder="N_IN_Conn_P_DstIP"><br><br>
+			<input type="text" name="f37" placeholder="N_IN_Conn_P_SrcIP">&nbsp
+			<input type="text" name="f38" placeholder="AR_P_Proto_P_Sport">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f39" placeholder="AR_P_Proto_P_Dport">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f40" placeholder="Pkts_P_State_P_Protocol_P_DestIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f41" placeholder="Pkts_P_State_P_Protocol_P_SrcIP">&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="f42" placeholder="category"><br><br>
+			<input type="text" name="f43" placeholder="subcategory">&nbsp&nbsp&nbsp&nbsp
+
+
+				<input type="submit" value="Predict"><br><br>
+	</form>
+
+			<center><h2 style="color:orange">{{msg}}</h2></center>
+		</div>
+	</div>
+	</section>
+
+
+
+
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="static/js/common.js"></script>
+<script src="static/js/home.js"></script>
+<script src="static/js/testimonials.js"></script>
+
+</body>
+</html>

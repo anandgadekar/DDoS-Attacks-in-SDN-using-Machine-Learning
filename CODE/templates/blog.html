@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="#">
+<title>DDOS </title>
+<!-- CSS -->
+<link href="static/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body style="background-image:url(img/bg7.jpg);background-attachment:fixed;background-size:cover;">
+
+<div id="loader-wrapper">
+<div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div>
+
+<div class="menu-outer">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+<!--           <li><a href="{{url_for('upload')}}">Upload</a></li>-->
+			<li><a href="{{url_for('prediction')}}">prediction</a></li>
+<!--           <li><a target="_blank" href="https://www.wowthemes.net/themes/beauttio/">WP Version</a></li>-->
+       </ul>
+   </nav>
+</div>
+<a class="menu-close" onClick="return true">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</a>
+
+<div class="fixedcallicon">
+<!--	<i class="fa fa-phone"></i><span class="hide">Book Now - 897.645.223</span>-->
+</div>
+<div class="container">
+<div class="logoarea">
+<div class="intro">
+<!--			<h1><span class="smaller wow zoomIn" data-wow-duration="2s" data-wow-delay="0.5">Detection of DDOS Attacks</span>-->
+<!--			<span class="big wow pulse" data-wow-duration="1s" data-wow-delay="0s">Ddos</span>-->
+<!--			<span class="small wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">-   -</span>-->
+			</h1>
+		</div>
+		</div>
+		<div class="pagearea">
+		<form action="{{url_for('upback')}}" method="post" enctype="multipart/form-data">
+			<input type="file" name="file" accept=".text/csv"  required>
+			<input type="submit" value="Upload">
+			</form>
+
+			<style>
+			  table,
+
+			  td {
+				padding: 10px;
+				border: 1px solid grey;
+				border-collapse: collapse;
+			  }
+    </style>
+			<table>
+				<th>
+				{% for i in col %}
+					<td>{{i}}</td>
+				{% endfor %}
+				</th>
+				{% for i in rows %}
+								<tr>
+					{% for j in i%}
+						<td>{{j}}</td>
+					{%endfor%}
+				{%endfor%}
+				</tr>
+			</table>
+		</div>
+	
+</div>
+<div class="clearfix"></div>
+<footer class="footer">
+<div class="container">
+<div class="pull-left">&copy; Template by WowThemes.net.</div>
+<div class="pull-right"> 
+	<div class="footericons">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-yelp"></i></a></a>
+		<a href="#"><i class="fa fa-google-plus"></i></a>
+	</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</footer>	
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="static/js/nicescroll.js"></script>
+<script src="static/js/common.js"></script>
+</body>
+</html>
